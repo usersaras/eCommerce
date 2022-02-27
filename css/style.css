@@ -18,6 +18,10 @@ body p {
   margin: 0;
 }
 
+body a {
+  text-decoration: none;
+}
+
 body .btn {
   font-size: 1.5rem;
 }
@@ -274,20 +278,22 @@ body #featuredcategory .overlay-featured-category h6 {
 
 body #featuredcategory .overlay-featured-category:after {
   content: "";
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateX(10deg);
+          transform: translate(-50%, -50%) rotateX(10deg);
   background: #000;
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: rotateX(85deg);
-          transform: rotateX(85deg);
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
   margin: 2px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
 body #featuredcategory .overlay-featured-category .f-cat-name {
@@ -332,18 +338,18 @@ body #featuredcategory .overlay-featured-category:hover::after {
   opacity: 0.3;
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
+  -webkit-transform: translate(-50%, -50%) rotateX(180deg);
+          transform: translate(-50%, -50%) rotateX(180deg);
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
 
-.end-button {
+body .end-button {
   position: relative;
   text-align: center;
 }
 
-.end-button:after, .end-button:before {
+body .end-button:after, body .end-button:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -356,16 +362,140 @@ body #featuredcategory .overlay-featured-category:hover::after {
           transform: translateY(-50%);
 }
 
-.end-button button {
+body .end-button button {
   border: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.end-button button:hover {
+body .end-button button:hover {
   background: #ffc107;
   color: white !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+body #latestnews .news-image .date-box {
+  width: 70px;
+  height: 70px;
+  font-weight: 700;
+  top: -10px;
+  left: 5%;
+}
+
+body #latestnews .news-image .date-box .triangle-left {
+  height: 0;
+  width: 0;
+  border-right: 5px solid #169EB1;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid #169EB1;
+  border-top: 5px solid transparent;
+  top: 0;
+  position: absolute;
+  left: -10px;
+}
+
+body #latestnews .news-image .date-box .triangle-right {
+  height: 0;
+  width: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid #169EB1;
+  border-bottom: 5px solid #169EB1;
+  border-top: 5px solid transparent;
+  top: 0;
+  position: absolute;
+  right: -10px;
+}
+
+body #latestnews .news-text {
+  gap: 20px;
+}
+
+body #latestnews .news-text p {
+  font-weight: 500;
+}
+
+body #latestnews .news-text h4 {
+  font-size: 1.8rem;
+}
+
+body #latestnews .news-text a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffc107;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #latestnews .news-text a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
+}
+
+body #testimonials .owl-test img {
+  width: 15%;
+}
+
+body #testimonials .owl-test .owl-flex-con {
+  width: 50%;
+  display: inline-block;
+  margin: 0 auto;
+  background: white;
+  -webkit-filter: drop-shadow(0px 0px 10px #c2c2c2);
+          filter: drop-shadow(0px 0px 10px #c2c2c2);
+  border: 2px solid white;
+}
+
+body #testimonials .owl-dots {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+body #testimonials .owl-dots .owl-dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px 30px 5px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+body #testimonials .owl-dots .active {
+  background-color: #ffc107;
+}
+
+body #subscribe {
+  background-image: url("https://www.ovationthemes.com/demos/shopkeeper-ecommerce/wp-content/themes/shopkeeper-ecommerce-pro/assets/images/subscribe-bg.png");
+}
+
+body #subscribe form input {
+  border: none;
+  padding: 8px;
+}
+
+body #subscribe form input:last-child {
+  background: #ffc107;
+  border: none;
+}
+
+body #shopbybrand .ds {
+  -webkit-filter: drop-shadow(0 0 5px #e6e6e6);
+          filter: drop-shadow(0 0 5px #e6e6e6);
+}
+
+body footer h3 {
+  font-size: 2.4rem;
+  border-left: 0.5rem solid #ffc107;
+  padding-left: 1rem;
+  margin-bottom: 15px;
+}
+
+body footer .bg-dy {
+  background: #FFF3D5;
+}
+
+body footer a {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
